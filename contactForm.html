@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <style>
+    form {
+      margin: 0 auto;
+      width: 400px;
+      padding: 1em;
+      border: 1px solid #CCC;
+      border-radius: 1em;
+    }
+
+    form div+div {
+      margin-top: 1em;
+    }
+
+    #info input,
+    textarea {
+      display: inline-block;
+      text-align: right;
+      font: 1em sans-serif;
+      box-sizing: border-box;
+      width: 300px;
+      border: 1px solid #999;
+    }
+
+    input:focus,
+    textarea:focus {
+
+      border-color: #000;
+    }
+
+    textarea {
+      vertical-align: top;
+
+
+      height: 5em;
+    }
+
+    .button {
+      padding-left: 0px;
+    }
+
+    button {
+      margin-left: .5em;
+    }
+
+    .block {
+      display: inline-block;
+      width: 140px;
+      text-align: left;
+      list-style-type: none
+    }
+
+    .container {
+      list-style-type: none;
+      display: flex;
+      align-content: flex-start;
+      flex-direction: column;
+      flex-basis: 1;
+    }
+
+    .container1 {
+      display: flex;
+      align-content: flex-start;
+      flex-direction: column;
+    }
+
+    .container2 {
+      display: flex;
+      align-content: flex-start;
+      flex-direction: row;
+      width: 100%
+    }
+
+    .containerRow {
+      list-style-type: none;
+      display: flex;
+      align-content: flex-start;
+      flex-direction: row;
+      width: 100%
+    }
+
+    .container3 {
+      display: flex;
+      align-content: flex-start;
+      flex-direction: row;
+
+    }
+;
+
+    #info {
+      display: flex;
+      align-content: center;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 0px;
+      margin-left: 0px;
+      width: 10%;
+    }
+
+    label {
+      text-align: left;
+    }
+    #buttons {
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+
+    }
+  </style>
+  <meta charset="utf-8">
+  <title>My test page</title>
+</head>
+
+<body>
+  <form action="http://localhost:3000" method="post">
+    <fieldset id="info">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="user_name">
+      </div>
+      <div>
+        <label for="mail">E-mail:</label>
+        <input type="email" id="mail" name="user_mail">
+      </div>
+      <div>
+        <label for="msg">Message:</label>
+        <textarea id="msg" name="user_message"></textarea>
+      </div>
+
+    </fieldset>
+
+    <fieldset id="container">
+      <legend>What is your preferred method of communication?</legend>
+      <ul class="containerRow">
+        <li class="container3">
+          <label for="email">Email:</label>
+          <input type="radio" id="email" name="" value="">
+        </li>
+        <li class="container3">
+          <label for="phone">Phone:</label>
+          <input type="radio" id="phone" name="" value="">
+        </li>
+        <li class="container3">
+          <label for="message in a bottle">Message in a bottle:</label>
+          <input type="radio" id="message in a bottle" name="" value="">
+
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset class="container">
+      <legend> Which devices to you use? </legend>
+      <ul class="container1">
+        <li class="container2">
+          <input type="checkbox" checked id="iOS" name="iOS" value="iOS">
+          <label for="iOS">iOS</label>
+        </li>
+        <li class="container2">
+          <input type="checkbox" checked id="Android" name="Android" value="Android">
+          <label for="Android">Android</label>
+        </li>
+        <li class="container2">
+          <input type="checkbox" checked id="Mac" name="Mac" value="Mac">
+          <label for="Mac">Mac</label>
+        </li>
+        <li class="container2">
+          <input type="checkbox" checked id="Windows" name="Windows" value="Windows">
+          <label for="Windows">Windows</label>
+        </li>
+        <li class="container2">
+          <input type="checkbox" checked id="Chrome" name="Chrome" value="Chrome">
+          <label for="Chrome">Chrome</label>
+        </li>
+        <li class="container2">
+          <input type="checkbox" checked id="Linux" name="Linux" value="Linux">
+          <label for="Linux">Linux</label>
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>Your Inquiry</legend>
+      <div>
+        <label for="inquiry">What is your inquiry about?</label>
+        <select>
+          <optgroup id="inquiry" label="What is your inquiry about?">
+            <option>providing feedback</option>
+            <option>kicking a child</option>
+            <option>writhing in pain</option>
+          </optgroup>
+        </select>
+      </div>
+      <div>
+        <label for="plan"> Your Plan:</label>
+        <input type="text" id="plan" name="comment" value="Premium Subscriber">
+      </div>
+      <div>
+        <label for="message"> Message:</label>
+        <textarea id="message" cols="30" rows="10"></textarea>
+      </div>
+    </fieldset>
+    <div id="buttons" class="containerRow">
+
+      <button type="submit">Send your message</button>
+      <button type="submit">reset</button>
+
+    </div>
+</body>
+</form>
+
+</html>
