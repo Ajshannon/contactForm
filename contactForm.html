@@ -121,33 +121,36 @@
     <fieldset id="info">
       <div>
         <label for="name">Name:</label>
-        <input type="text" id="name" name="user_name">
+        <input type="text" id="name" name="user_name" autofocus>
       </div>
       <div>
         <label for="mail">E-mail:</label>
         <input type="email" id="mail" name="user_mail">
       </div>
       <div>
-        <label for="msg">Message:</label>
-        <textarea id="msg" name="user_message"></textarea>
+          <label for="msg">Message:</label>
+          <textarea id="msg" name="user_message"></textarea>
+        </div>
+      <div>
+        <label for="phone-number">Phone-Number:</label>
+        <input type="tel" id="phone-number" name="user_mail">
       </div>
 
     </fieldset>
-
     <fieldset id="container">
       <legend>What is your preferred method of communication?</legend>
       <ul class="containerRow">
         <li class="container3">
-          <label for="email">Email:</label>
-          <input type="radio" id="email" name="" value="">
+          <input type="radio" id="email" name="" value=""> Email 
         </li>
         <li class="container3">
-          <label for="phone">Phone:</label>
-          <input type="radio" id="phone" name="" value="">
+          
+          <input type="radio" id="phone" name="" value=""> phone
         </li>
+        
         <li class="container3">
-          <label for="message in a bottle">Message in a bottle:</label>
-          <input type="radio" id="message in a bottle" name="" value="">
+          
+          <input type="radio" id="message in a bottle" name="" value=""> message in a bottle
 
         </li>
       </ul>
